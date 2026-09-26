@@ -1,23 +1,76 @@
 aid: artiva
+
 name: Artiva
-description: 'Artiva is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Artiva Biotherapeutics is a clinical‑stage biotechnology company focused on developing natural killer (NK) cell‑based therapies for autoimmune diseases and cancers. Their lead candidate AlloNK® is an off‑the‑shelf, allogeneic NK cell therapy evaluated in combination with B‑cell‑targeted antibodies, aiming to provide safe, scalable treatments accessible to patients worldwide.'
+
 url: https://raw.githubusercontent.com/api-evangelist/artiva/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
-- Company
-apis: []
+- Biotechnology
+- Biopharma
+- Cell Therapy
+- Autoimmune Diseases
+- Oncology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/artiva-llms.txt
+- type: Hosts
+  url: hosts/artiva-hosts.yml
+- type: Vendors
+  url: vendors/artiva-vendors.yml
+- type: Leadership
+  url: https://www.artivabio.com/leadership/
+- type: DomainSecurity
+  url: security/artiva-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/artiva_stock/
+  url: https://www.artivabio.com/
+- type: Contact
+  url: https://www.artivabio.com/contact/
+- type: Careers
+  url: https://www.artivabio.com/careers/
+- type: News
+  url: https://www.artivabio.com/news/
+- type: Investors
+  url: https://investors.artivabio.com/
+- type: PrivacyPolicy
+  url: https://www.artivabio.com/privacy-policy/
+- type: TermsOfService
+  url: https://www.artivabio.com/terms-of-use/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine‑readable contract found on the company's domains.
+  evidence:
+    - url: https://api.artivabio.com/openapi.json
+      status: 0
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
